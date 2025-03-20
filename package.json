@@ -1,0 +1,49 @@
+{
+  "name": "arcgis-2d-spa-template",
+  "version": "0.0.2",
+  "description": "Template for ArcGIS API single page application",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build-and-preview": "tsc && vite build && vite preview",
+    "preview": "vite preview",
+    "lint:spell": "cspell lint . --relative --no-progress --no-summary --fail-fast",
+    "predeploy": "npm run build && tsc --project tools/tsconfig.json",
+    "deploy": "node tools/deploy.mjs"
+  },
+  "author": {
+    "name": "Put your name here. If you only want to include your name you can replace this JSON object with just your name as a string.",
+    "email": "YourGithubUserName@users.noreply.github.com",
+    "url": "https://example.com/you/can/omit/the/url/if/you/dont/have/a/website"
+  },
+  "contributors": [
+    {
+      "name": "Jeff Jacobson",
+      "email": "JeffJacobson@users.noreply.github.com"
+    }
+  ],
+  "private": true,
+  "license": "Unlicense",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/gh-pages": "^6.1.0",
+    "@types/node": "^22.13.10",
+    "cspell": "^8.17.5",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.2"
+  },
+  "keywords": [
+    "arcgis",
+    "template",
+    "WSDOT",
+    "map",
+    "spa",
+    "single-page-app"
+  ],
+  "dependencies": {
+    "@arcgis/core": "^4.32.9",
+    "@arcgis/map-components": "^4.32.12",
+    "@esri/calcite-components": "^3.0.3"
+  }
+}
