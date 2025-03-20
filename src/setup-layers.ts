@@ -10,5 +10,8 @@ export async function addLayersToMap(
 	const { createMilepostLineLayer } = await import("./milepost-line-layer");
 
 	const mpLineLayer = createMilepostLineLayer();
+
+	
+
 	map.add(mpLineLayer);
 }

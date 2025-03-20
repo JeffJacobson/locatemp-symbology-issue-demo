@@ -3,6 +3,7 @@ import MilepostOffsetLineRenderer from "./MilepostOffsetLineRenderer";
 import { lineSegmentLabelClass } from "./label";
 import waExtent from "../WAExtent";
 import { fields } from "./fields";
+import { getGraphic } from "./sample-responses";
 
 /**
  * Creates a new feature layer that displays mileposts as lines.
@@ -26,7 +27,7 @@ export function createMilepostLineLayer(
 		// Since there are no features at the beginning,
 		// need to add an empty array as the source.
 		renderer: MilepostOffsetLineRenderer,
-		source: [],
+		source: [getGraphic()],
 		popupEnabled: true,
 		hasM: true,
 		labelingInfo: [lineSegmentLabelClass],
