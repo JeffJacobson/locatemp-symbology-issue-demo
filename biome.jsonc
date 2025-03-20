@@ -5,10 +5,11 @@
 		"clientKind": "git",
 		"useIgnoreFile": true
 	},
+	"linter": {
+		"ignore": ["**/*.exp"]
+	},
 	"formatter": {
-		"ignore": [
-			"tsconfig.json"
-		]
+		"ignore": ["tsconfig.json"]
 	},
 	"organizeImports": {
 		"enabled": true
