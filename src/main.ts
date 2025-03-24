@@ -59,10 +59,14 @@ top-level await, we need to wrap our code in a self-executing async function.
 
 	const { addLayersToMap } = await import("./setup-layers");
 
+	const arcgisMap = document.body.querySelector("arcgis-map");
+
+	if (!arcgisMap) {
+		throw new TypeError("Cannot find the arcgis-map element.");
+	}
+
 	// Wait for the map to load before adding layers.
-	document.body
-		.querySelector("arcgis-map")
-		?.addEventListener("arcgisViewReadyChange", addLayersToMap);
+	arcgisMap.addEventListener("arcgisViewReadyChange", addLayersToMap);
 
 	await setupLayerList();
 
